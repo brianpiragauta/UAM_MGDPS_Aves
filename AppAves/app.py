@@ -23,7 +23,7 @@ variables_bio = {
 # === ENLACES ===
 modelos_urls = {
     "Grallaria milleri": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Grallaria_Milleri_Regressor_RandomForest.pkl",
-    "Oxypogon stuebelii": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Oxypogon_stuebelii_Regressor_RandomForest.plk"
+    "Oxypogon stuebelii": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Oxypogon_stuebelii_Regressor_RandomForest.pkl"
 }
 
 base_csv_url = "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/DatosClimaticos/DatosRandomForest/Proyectadas/BIO_variables_{}.csv"
