@@ -5,3 +5,4 @@ folium
 requests
 joblib
 cloudpickle
+scikit-learn
