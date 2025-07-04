@@ -6,6 +6,7 @@ from streamlit_folium import folium_static
 import joblib
 import requests
 from io import BytesIO
+import cloudpickle
 
 st.set_page_config(layout="wide")
 st.title("🕊️ Proyección de Abundancia de Aves")
@@ -35,7 +36,8 @@ if st.button("Generar mapa"):
         # Descargar modelo
         modelo_url = modelos_urls[especie]
         response = requests.get(modelo_url)
-        modelo = joblib.load(BytesIO(response.content))
+        modelo = cloudpickle.load(BytesIO(response.content))
+
 
         # Descargar CSV
         url_csv = base_csv_url.format(anio)
