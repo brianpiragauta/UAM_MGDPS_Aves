@@ -14,9 +14,11 @@ st.title("🕊️ Proyección de Abundancia de Aves")
 # === CONFIGURACIÓN ===
 años = list(range(2025, 2035))
 umbral = 1  # Abundancia mínima para mostrar en el mapa
-variables_bio = [
-    'lat', 'lon', 'año', 'BIO1', 'BIO4', 'BIO8', 'BIO9', 'BIO10', 'BIO15'
-]
+variables_bio = {
+    "Grallaria milleri": ['lat', 'lon','año','BIO1','BIO2','BIO4', 'BIO8', 'BIO9', 'BIO10', 'BIO15'],
+    "Oxypogon stuebelii": ['lat', 'lon','año','BIO1', 'BIO2', 'BIO4', 'BIO12', 'BIO14', 'BIO15']
+}
+
 
 # === ENLACES ===
 modelos_urls = {
@@ -45,7 +47,7 @@ if st.button("Generar mapa"):
         df['año'] = anio
 
         # Predecir abundancia
-        X = df[variables_bio]
+        X = df[variables_bio[especie]]
         df["abundancia_predicha"] = modelo.predict(X)
 
         # Filtrar por umbral
