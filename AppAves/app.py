@@ -9,7 +9,7 @@ from io import BytesIO
 import cloudpickle
 
 st.set_page_config(layout="wide")
-st.title("🕊️ Proyección de Abundancia de Aves")
+st.title("Proyección de Abundancia de Aves")
 
 # === CONFIGURACIÓN ===
 años = list(range(2025, 2035))
@@ -88,17 +88,7 @@ if st.button("Generar mapa"):
                 tooltip=f"{row['abundancia_predicha']:.2f}"
             ).add_to(mapa)
 
-        explicacion = f"""
-        <b> Mapa de abundancia proyectada - <i>{especie}</i> ({anio})</b><br><br>
-        Puntos con abundancia predicha mayor o igual a {umbral}.
-        """
-
-        folium.Marker(
-            location=[6.1, -75.5],
-            icon=folium.Icon(color="purple", icon="info-sign"),
-            popup=folium.Popup(folium.Html(explicacion, script=True), max_width=450)
-        ).add_to(mapa)
-
+        
         leyenda_html = f"""
         <div style="
             position: fixed;
