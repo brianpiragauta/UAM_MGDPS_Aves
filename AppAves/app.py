@@ -20,7 +20,7 @@ variables_bio = [
 
 # === ENLACES ===
 modelos_urls = {
-    "Grallaria milleri": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Grallaria_Milleri_RandomForest.joblib",
+    "Grallaria milleri": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Grallaria_Milleri_Regressor_RandomForest.pkl",
     "Oxypogon stuebelii": "https://raw.githubusercontent.com/brianpiragauta/UAM_MGDPS_Aves/main/Modelos/modelo_Oxypogon_stuebelii_RandomForest.joblib"
 }
 
