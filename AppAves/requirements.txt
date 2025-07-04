@@ -4,3 +4,4 @@ pandas
 folium
 requests
 joblib
+cloudpickle
